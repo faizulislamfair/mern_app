@@ -3,7 +3,12 @@ const app = express()
 const mongoose = require('mongoose')
 const UserModel = require('./models/Users')
 
+const cors = require('cors')
+
+
 app.use(express.json())
+app.use(cors())
+
 
 mongoose.connect("mongodb+srv://pleasure_house:pleasurehouse@clustermern.taca5.mongodb.net/simpleMern?retryWrites=true&w=majority")
 
